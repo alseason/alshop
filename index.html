@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>리뷰</title>
+</head>
+<body>
+    
+
+    <script>
+        console.log(window.location.search)
+        const loca =window.location.search;
+        const param = new URLSearchParams(loca);
+
+        console.log(param);
+
+        param.get('img');
+
+        let image = document.createElement('img');
+
+        image.src = `https://alseason.github.io/alshop/${param.get('img')}.png`
+        document.querySelector('body').appendChild(image);
+    </script>
+
+</body>
+</html>
